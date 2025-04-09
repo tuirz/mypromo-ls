@@ -1,0 +1,175 @@
+  body {
+    font-family: "copperplate", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://midenews.com/wp-content/uploads/2023/07/SIMPLON-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+  }
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.on_hover {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.button-56:hover .normal {
+  opacity: 0;
+}
+
+.button-56:hover .on_hover {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slide-in 1s ease;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.normal {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.button-56 {
+  align-items: center;
+  background-color: linear-gradient(45deg, #e8b6b6, #ff7b7b);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 50%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 0.2s ease-out;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.promo-list {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 10px 0 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #303030a1;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.404);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: red;
+  text-decoration: underline;
+}
