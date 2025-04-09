@@ -15,22 +15,27 @@ h1 {
   margin: 0 auto;
   font-size: 2.5rem;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ff7b7b, #e8b6b6, #ff7b7b);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 3s infinite;
   padding: 10px 20px;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   display: inline-block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 70px 20px;
+  gap: 50px 20px;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   margin: 0 auto;
   max-width: 600px;
 }
@@ -77,25 +82,29 @@ h1 {
 .normal {
   display: block;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.7s ease;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .button-56 {
   align-items: center;
-  background-color: linear-gradient(45deg, #e8b6b6, #ff7b7b);
+  background-color: linear-gradient(45deg, #ff7b7b, #e8b6b6);
   border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  height: 48px;
+  font-family: papyrus, fantasy;
+  font-size: 15px;
+  height: 50px;
   justify-content: center;
-  line-height: 20px;
-  max-width: 50%;
-  padding: 0 25px;
+  line-height: 1,5;
+  max-width: 200px;
+  padding: 0 15px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -124,18 +133,19 @@ h1 {
   transform: translate(0, 0);
 }
 
-.button-56:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
 .button-56:hover {
   outline: 0;
+  background: linear-gradient(45deg, #e8b6b6, #ff7b7b);
+  color: #111;
 }
 
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
+  }
+  h1 {
+    font-size: 2rem;
+    padding: 8px 15px;
   }
 }
 
@@ -151,7 +161,8 @@ h1 {
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
   list-style: none;
   margin: 10px 0 0;
 }
